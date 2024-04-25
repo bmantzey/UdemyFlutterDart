@@ -13,14 +13,18 @@ class MainDrawer extends StatelessWidget {
           DrawerHeader(
             padding: const EdgeInsets.all(20),
             decoration: BoxDecoration(
-                gradient: LinearGradient(
-              colors: [
-                Theme.of(context).colorScheme.primaryContainer,
-                Theme.of(context).colorScheme.primaryContainer.withOpacity(0.8),
-              ],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            )),
+              gradient: LinearGradient(
+                colors: [
+                  Theme.of(context).colorScheme.primaryContainer,
+                  Theme.of(context)
+                      .colorScheme
+                      .primaryContainer
+                      .withOpacity(0.8),
+                ],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ),
+            ),
             child: Row(
               children: [
                 Icon(
@@ -29,15 +33,16 @@ class MainDrawer extends StatelessWidget {
                   color: Theme.of(context).colorScheme.primary,
                 ),
                 const SizedBox(width: 18),
-                Text('Cooking Up!',
-                    style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                          color: Theme.of(context).colorScheme.primary,
-                        )),
+                Text(
+                  'Cooking Up!',
+                  style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                        color: Theme.of(context).colorScheme.primary,
+                      ),
+                ),
               ],
             ),
           ),
           ListTile(
-
             leading: Icon(
               Icons.restaurant,
               size: 26,
@@ -54,7 +59,7 @@ class MainDrawer extends StatelessWidget {
               onSelectScreen('meals');
             },
           ),
-                    ListTile(
+          ListTile(
             leading: Icon(
               Icons.settings,
               size: 26,
@@ -71,7 +76,6 @@ class MainDrawer extends StatelessWidget {
               onSelectScreen('filters');
             },
           ),
-
         ],
       ),
     );
