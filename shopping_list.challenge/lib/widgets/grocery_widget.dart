@@ -22,12 +22,12 @@ class GroceryWidget extends StatelessWidget {
         ),
         Text(
           groceryItem.name,
-          style: TextStyle(fontSize: 16, color: Colors.white),
+          style: const TextStyle(fontSize: 16, color: Colors.white),
         ),
         const Spacer(),
         Text(
             groceryItem.quantity.toString(),
-            style: TextStyle(fontSize: 16, color: Colors.white),
+            style: const TextStyle(fontSize: 16, color: Colors.white),
           ),
       ],
     );

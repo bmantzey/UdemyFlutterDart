@@ -30,17 +30,18 @@ class GroceryList extends StatelessWidget {
       ),
     );
 
-    if (!groceries.isEmpty) {
+    if (groceries.isNotEmpty) {
       content = Container(
         padding: const EdgeInsets.all(16.0),
         child: ListView.separated(
-            itemCount: groceries.length,
-            itemBuilder: (ctx, index) => GroceryWidget(
-                  groceryItem: groceries[index],
-                ),
-            separatorBuilder: (context, index) => SizedBox(
-                  height: 32,
-                )),
+          itemCount: groceries.length,
+          itemBuilder: (ctx, index) => GroceryWidget(
+            groceryItem: groceries[index],
+          ),
+          separatorBuilder: (context, index) => const SizedBox(
+            height: 32,
+          ),
+        ),
       );
     }
 
